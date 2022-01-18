@@ -1,0 +1,472 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+    <title>eShopper - Home</title>
+    <!--CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <!--Js -->
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Header Start -->
+        <header class="header">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="row">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle nav-toggle collapsed " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="col-sm-1">
+                            <a href="index.html" title="eShopper" class="logo"><img src="{% static 'images/logo.svg' %}" alt="eShopper"></a>
+                        </div>
+                        <div class="col-sm-5 col-xs-12">
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <nav class="nav is-fixed">
+                                    <div class="nav-container clearfix">
+                                        <ul class="nav-menu menu clearfix">
+                                            <li class="menu-item"><a href="index.html" class="menu-link" title="Home">Home</a></li>
+                                            <li class="menu-item">
+                                                <a href="#" class="menu-link" title="Men">Men</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="product-detail.html" title="Jeans">Jeans</a></li>
+                                                    <li><a href="product-detail.html" title="Shirts">Shirts</a></li>
+                                                    <li><a href="product-detail.html" title="T-shirts">T-shirts</a></li>
+                                                    <li><a href="product-detail.html" title="Chinos">Chinos</a></li>
+                                                    <li><a href="product-detail.html" title="Blazers">Blazers</a></li>
+                                                    <li><a href="product-detail.html" title="Night Wear">Night Wear</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item"><a href="product.html" class="menu-link" title="Women">Women</a></li>
+                                            <li class="menu-item"><a href="product.html" class="menu-link" title="Kids">Kids</a></li>
+                                            <li class="menu-item"><a href="product.html" class="menu-link" title="Accessories">Accessories</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 search-outer">
+                            <form>
+                                <ul class="header-right-block clearfix">
+                                    <li class="login-link"><a href="#" title="Login" data-toggle="modal" data-target="#Login-popup">Login</a></li>
+                                    <li class="cart-outer">
+                                        <a href="#" title="Add to Cart" class="add-to-cart"></a>
+                                        <div class="cart-wrap">
+                                            <p>Recently added item(s)</p>
+                                            <ul>
+                                                <li>
+                                                    <a class="cart-product" title="consectetur adipiscing elit" href="product-detail.html"><img alt="" src="images/new-thumb-01.jpg"></a>
+
+                                                    <div class="cart-details">
+                                                        <a class="btn-remove" title="Remove item" href="#"><img src="images/cross.svg" alt=""></a>
+                                                        <a class="btn-edit" title="Edit item" href="cart.html">
+                                                            <img src="images/edit.svg" alt="">
+                                                        </a>
+                                                        <p class="product-name"><a href="product-detail.html">U.S. Polo Assn. Full Sleeve Plain T-Shirts...</a></p>
+                                                        <p class="price">$120.00 </p>
+                                                        <p class="qty-wrapper">
+                                                            <span>Qty :  </span>
+                                                            <span>1</span>
+                                                        </p>
+                                                        <div class="size-wrap">
+                                                            <dl class="item-options">
+                                                                <dt>Size :</dt>
+                                                                <dd>
+                                                                    Medium/Large    
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a class="cart-product" title="consectetur adipiscing elit" href="product-detail.html"><img alt="" src="images/new-thumb-02.jpg"></a>
+
+                                                    <div class="cart-details">
+                                                        <a class="btn-remove" title="Remove item" href="#"><img src="images/cross.svg" alt=""></a>
+                                                        <a class="btn-edit" title="Edit item" href="cart.html">
+                                                            <img src="images/edit.svg" alt="">
+                                                        </a>
+                                                        <p class="product-name"><a href="product-detail.html">U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men</a></p>
+                                                        <p class="price">$120.00</p>     
+                                                        
+                                                        <p class="qty-wrapper">
+                                                            <span>Qty :  </span>
+                                                            <span>
+                                                                1
+                                                            </span>
+                                                        </p>      
+                                                        <div class="size-wrap">
+                                                            <dl class="item-options">
+                                                                <dt>Size :</dt>
+                                                                <dd>
+                                                                    Medium/Large    
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="summary">           
+                                                <p class="subtotal">
+                                                    <span>Cart Subtotal:</span> <span class="price">$168.00</span>
+                                                </p>
+                                            </div>
+                                            <div class="cart-action">
+                                                <a href="cart.html" title="View Cart"  class="btn-secondary">View Cart</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="search-link-wrap">
+                                        <div class="search-link-outer">
+                                            <div class="search-link clearfix">
+                                                <input type="text" class="form-control" placeholder="Search">
+                                                <a href="#" title="Search"><i><img src="{% static 'images/search.svg' %}" alt="Search"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+
+                        <!-- /.navbar-collapse -->
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </header>
+        <!-- Header End-->
+        <div class="banner">
+            <div id="sync1" class="owl-carousel">
+                <div class="item">
+                    <img src="{% static 'images/banner.jpg' %}" alt="banner">
+                </div>
+                <div class="item">
+                    <img src="{% static 'images/banner1.jpg' %}" alt="banner">
+                </div>
+                <div class="item">
+                    <img src="{% static 'images/banner2.jpg' %}" alt="banner">
+                </div>
+            </div>
+        </div>
+        <section class="services-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="media service01">
+                            <div class="media-left"></div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Free Delivery Worldwide</h4>
+                                <p>At vero eos et accusamus et iusto odio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="media service02">
+                            <div class="media-left"></div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Free Return For 90 Day</h4>
+                                <p>At vero eos et accusamus et iusto odio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="media service03">
+                            <div class="media-left"></div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Discount on Order Gift</h4>
+                                <p>At vero eos et accusamus et iusto odio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Content Start-->
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="heading-block">
+                            <h2>Trending Product</h2>
+                        </div>
+                        <div class="grid-content">
+                            <div class="grid row">
+                                <div class="col-sm-3 col-xs-6">
+                                    <figure class="effect-goliath">
+                                        <div class="thumb-outer">
+                                            <a href="#" title="U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men" class="thumb-image"><img src="images/new-thumb-01.jpg" alt="thumb"></a>
+                                            <a href="cart.html" title="Add to Cart" class="cart-button">Add to Cart</a>
+                                        </div>
+                                        <figcaption>
+                                            <a href="product-detail.html" title="U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men" class="heading">U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men</a>
+                                            <span>$120.00</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <figure class="effect-goliath">
+                                        <div class="thumb-outer">
+                                            <a href="#" title="U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men" class="thumb-image"><img src="images/new-thumb-02.jpg" alt="Thumb"></a>
+                                            <a href="cart.html" title="Add to Cart" class="cart-button">Add to Cart</a>
+                                        </div>
+                                        <figcaption>
+                                            <a href="product-detail.html" title="U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men" class="heading">U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men</a>
+                                            <span>$120.00</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <figure class="effect-goliath">
+                                        <div class="thumb-outer">
+                                            <a href="#" title="U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men" class="thumb-image"><img src="images/new-thumb-03.jpg" alt="Thumb"></a>
+                                            <a href="cart.html" title="Add to Cart" class="cart-button">Add to Cart</a>
+                                        </div>
+                                        <figcaption>
+                                            <a href="product-detail.html" title="U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men" class="heading">U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men</a>
+                                            <span>$120.00</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <figure class="effect-goliath">
+                                        <div class="thumb-outer">
+                                            <a href="#" title="U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men" class="thumb-image"><img src="images/new-thumb-04.jpg" alt="Thumb"></a>
+                                            <a href="cart.html" title="Add to Cart" class="cart-button">Add to Cart</a>
+                                        </div>
+                                        <a href="#" title=""></a>
+                                        <figcaption>
+                                            <a href="product-detail.html" title="U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men" class="heading">U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men</a>
+                                            <span>$120.00</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <figure class="effect-goliath">
+                                        <div class="thumb-outer">
+                                            <a href="#" title="U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men" class="thumb-image"><img src="images/new-thumb-05.jpg" alt="Thumb"></a>
+                                            <a href="cart.html" title="Add to Cart" class="cart-button">Add to Cart</a>
+                                        </div>
+                                        <figcaption>
+                                            <a href="product-detail.html" title="U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men" class="heading">U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men</a>
+                                            <span>$120.00</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <figure class="effect-goliath">
+                                        <div class="thumb-outer">
+                                            <a href="#" title="U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men" class="thumb-image"><img src="images/new-thumb-06.jpg" alt="Thumb"></a>
+                                            <a href="cart.html" title="Add to Cart" class="cart-button">Add to Cart</a>
+                                        </div>
+                                        <figcaption>
+                                            <a href="product-detail.html" title="U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men" class="heading">U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men</a>
+                                            <span>$120.00</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <figure class="effect-goliath">
+                                        <div class="thumb-outer">
+                                            <a href="#" title="U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men" class="thumb-image"><img src="images/new-thumb-07.jpg" alt="Thumb"></a>
+                                            <a href="cart.html" title="Add to Cart" class="cart-button">Add to Cart</a>
+                                        </div>
+                                        <figcaption>
+                                            <a href="product-detail.html" title="U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men" class="heading">U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men</a>
+                                            <span>$120.00</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <figure class="effect-goliath">
+                                        <div class="thumb-outer">
+                                            <a href="#" title="U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men" class="thumb-image"><img src="images/new-thumb-08.jpg" alt="Thumb"></a>
+                                            <a href="cart.html" title="Add to Cart" class="cart-button">Add to Cart</a>
+                                        </div>
+                                        <figcaption>
+                                            <a href="product-detail.html" title="U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men" class="heading">U.S. Polo Assn. Full Sleeve Plain T-Shirts for Men</a>
+                                            <span>$120.00</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-12 col-xs-12">
+                                    <span class="button-outer text-center">
+                                      <a href="product.html" title="More Products" class="btn-tertiary">More Products</a>
+                                  </span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="inner-banner">
+            <div class="container">
+                <div class="banner-inner-text">
+                    <div class="banner-inner-width">
+                        <div class="text01">
+                            <span>Get the</span> latest
+                        </div>
+                        <div class="text01">
+                            <span>womens</span> fashion
+                        </div>
+                        <a href="product.html" title="Get Exclusive Collection For Women" class="btn-secondary">Get Exclusive Collection For Women</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2>Testimonial</h2>
+            <div class="slider-outer">
+                <div class="testimonial-slider owl-carousel">
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-sm-3 col-xs-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{% static 'images/testimonial_3.jpg' %}" alt="Testimonial">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>John Clay</h5>
+                                        <p>Cyclist</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-9 col-xs-8">
+                                <div class="description">"lorem ipsum suffered alteration in aome from, by injected humor , or randomized words which don't look even slightly believable.There are many varation of passenger randomized words which don't look even slightly believable"</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-sm-3 col-xs-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{% static 'images/testimonial_3.jpg' %}" alt="Testimonial">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>John Clay</h5>
+                                        <p>Cyclist</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-9 col-xs-8">
+                                <div class="description">"lorem ipsum suffered alteration in aome from, by injected humor , or randomized words which don't look even slightly believable.There are many varation of passenger randomized words which don't look even slightly believable"</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-sm-3 col-xs-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{% static 'images/testimonial_3.jpg' %}" alt="Testimonial">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>John Clay</h5>
+                                        <p>Cyclist</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-9 col-xs-8">
+                                <div class="description">"lorem ipsum suffered alteration in aome from, by injected humor , or randomized words which don't look even slightly believable.There are many varation of passenger randomized words which don't look even slightly believable"</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-sm-3 col-xs-4">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="{% static 'images/testimonial_3.jpg' %}" alt="Testimonial">
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>John Clay</h5>
+                                        <p>Cyclist</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-9 col-xs-8">
+                                <div class="description">"lorem ipsum suffered alteration in aome from, by injected humor , or randomized words which don't look even slightly believable.There are many varation of passenger randomized words which don't look even slightly believable"</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Content End-->
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="clearfix">
+                <div class="footer-content">
+                    <form>
+                        <div class="form-group">
+                            <label>Subscribe for Newsletter</label>
+                            <p class="thankyou-msg">Thank you for your subscription.</p>
+                            <input type="text" class="form-control" placeholder="Enter your email address">
+                        </div>
+                        <button type="button" class="sign-up">sign up</button>
+                    </form>
+                    <ul class="footer-links">
+                        <li><a href="index.html" title="Home">Home</a></li>
+                        <li><a href="about-us.html" title="About us">About us</a></li>
+                        <li><a href="register.html" title="Register">Register</a></li>
+                        <li><a href="contact.html" title="Contact us">Contact us</a></li>
+                    </ul>
+                    <p class="copyright">&copy; 2017 eShopper online store. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#" title="Back to Top" class="back-to-top"><img src="images/up-arrow-white.svg" alt="Arrow"></a>
+    <!-- Footer End -->
+    <div class="popup-outer">
+        <div class="modal fade" id="Login-popup" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h2>eShopper Login</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form  class="loginform" method="POST" action="login">{% csrf_token %}
+                            <div class="form-group">
+                                <label class="form-label">Username</label>
+                                <input type="text" class="form-control" placeholder="Enter your Username" name="loginuser">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-control" placeholder="Enter your Password" name="loginpass">
+                            </div>
+
+                            <div class="form-group clearfix login-options">
+                                <button type="submit" class="btn-secondary">Login</button>
+                                <p>Not a Member? <a href="register.html" title="Register">Register</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
