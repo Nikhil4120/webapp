@@ -34,7 +34,7 @@
                 </p>
                 <div class="row">
                     <div class="col-sm-12">
-                        <form class="form-block" method="POST">{% csrf_token %}
+                        <form class="form-block" method="POST" id="Reg_form">{% csrf_token %}
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
@@ -93,17 +93,18 @@
                             <div class="bottom-group ">
                                 <div class=" row">
                                     <div class="term-condition col-sm-6">
-                                        <div class="checkbox">
-                                            <label class="chklbl"><input type="checkbox" value="">&nbsp;&nbsp;I Agree
+                                        <div class="checkbox" >
+                                            <label class="chklbl"><input type="checkbox" value="1" name="checkbox" id="check">&nbsp;&nbsp;I Agree
                                                 with <a href="#">Terms &amp; Conditions.</a></label>
                                         </div>
+                                        <span class="error"></span>
                                     </div>
 
                                     <div class=" reg-submit col-sm-6 text-right">
 
                                         <div class="form-group clearfix submit-outer">
-                                            <button type="submit" class="btn-secondary">Submit</button>
-                                            <button type="button" class="btn-tertiary">Clear</button>
+                                            <button type="button" class="btn-secondary" id="sub_btn">Submit</button>
+                                            <button type="button" class="btn-tertiary" id="Reg_clr">Clear</button>
                                         </div>
 
                                     </div>
@@ -126,4 +127,18 @@
     </div>
 </body>
 
+<script>
+    $('#sub_btn').click(function(){
+        if ($('#check').prop('checked'))
+        {
+           $('#Reg_form').submit();
+        }
+        else{
+            $('.error').html('Please select terms and condition').css('color','red');
+        }
+    })
+    $('#Reg_clr').click(function(){
+        $('#Reg_form')[0].reset();
+    })
+</script>
 </html>

@@ -1,9 +1,13 @@
 from django.shortcuts import render,HttpResponse,redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
+from home.models import Category,SubCategory
 
 def home(request):
-    return render(request,'index.html')
+    category = Category.objects.all()
+    subcategory = SubCategory.objects.all()
+    context= {'category':category,'subcategory':subcategory}
+    return render(request,'index.html',context)
 
 def forget(request):
     if request.method == "POST":

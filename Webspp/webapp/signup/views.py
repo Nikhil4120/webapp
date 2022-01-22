@@ -1,6 +1,8 @@
 from django.shortcuts import render,HttpResponse,redirect
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
+from home.models import Category,SubCategory
+
 # Create your views here.
 
 def signup(request):
@@ -38,4 +40,7 @@ def signup(request):
             messages.error(request, "Password Does not match")
             return redirect('/')
     else:
-        return render(request,"register.html")
+        category = Category.objects.all()
+        subcategory = SubCategory.objects.all()
+        context = {'category': category, 'subcategory': subcategory}
+        return render(request,"register.html",context)
