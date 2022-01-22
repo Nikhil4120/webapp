@@ -30,6 +30,7 @@ class Product(models.Model):
     color=models.CharField(max_length=10)
     size=models.CharField(max_length=5)
     price=models.DecimalField(decimal_places=2,max_digits=5)
+    quantity=models.IntegerField(default=0)
     sku_id=models.CharField(max_length=10)
     is_trending=models.BooleanField(default=0)
     class Meta:

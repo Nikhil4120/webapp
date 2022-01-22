@@ -24,11 +24,11 @@
                                     <li class="menu-item"><a href="/" class="menu-link" title="Home">Home</a></li>
                                     {% for  category in category  %}
                                         <li class="menu-item">
-                                            <a href="#" class="menu-link" title="Men">{{ category.category_name }}</a>
+                                            <a href="#" class="menu-link" title="{{ category.category_name }}">{{ category.category_name }}</a>
                                             <ul class="sub-menu">
                                                 {% for  subcategory in subcategory  %}
                                                     {% if subcategory.category.category_id == category.category_id %}
-                                                        <li><a href="product-detail.html" title="Jeans">{{ subcategory.subcategory_name }}</a></li>
+                                                        <li><a href="/product/{{category.category_id}}/{{subcategory.subcategory_id}}" title="{{ subcategory.subcategory_name }}">{{ subcategory.subcategory_name }}</a></li>
                                                     {% endif %}
                                                 {% endfor %}
                                             </ul>
