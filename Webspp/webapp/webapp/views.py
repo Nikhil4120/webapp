@@ -1,13 +1,21 @@
 from django.shortcuts import render,HttpResponse,redirect
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User,auth
 from django.contrib import messages
-from home.models import Category,SubCategory
+from home.models import Category,SubCategory,Product
 
 def home(request):
     category = Category.objects.all()
     subcategory = SubCategory.objects.all()
-    context= {'category':category,'subcategory':subcategory}
+    product=Product.objects.filter( is_trending = 1)
+    context= {'category':category,'subcategory':subcategory,'product':product}
     return render(request,'index.html',context)
+
+def logout(request):
+    if request.user.is_authenticated:
+        auth.logout(request)
+        return redirect('/')
+    else:
+        return HttpResponse("Something went wrong")
 
 def forget(request):
     if request.method == "POST":

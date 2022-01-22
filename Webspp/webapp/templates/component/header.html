@@ -42,7 +42,20 @@
                 <div class="col-sm-6 col-xs-12 search-outer">
                     <form>
                         <ul class="header-right-block clearfix">
-                            <li class="login-link"><a href="#" title="Login" data-toggle="modal" data-target="#Login-popup">Login</a></li>
+                            {%  if request.user.is_authenticated %}
+                                 {% if request.user != 'admin' %}
+                                    <li class="login-link">
+                                        <a href="/logout" title="Logout" style="cursor: pointer"
+                                        >Logout</a
+                                        >
+                                    </li>
+                                {% else %}
+                                    <li class="login-link"><a href="#" title="Login" data-toggle="modal" data-target="#Login-popup">Login</a></li>
+                                {% endif %}
+                            {%else %}
+                                <li class="login-link"><a href="#" title="Login" data-toggle="modal" data-target="#Login-popup">Login</a></li>
+                            {% endif %}
+
                             <li class="cart-outer">
                                 <a href="#" title="Add to Cart" class="add-to-cart"></a>
                                 <div class="cart-wrap">
