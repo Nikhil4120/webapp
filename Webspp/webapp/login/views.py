@@ -16,7 +16,7 @@ def login(request):
             # print(otp)
             request.session['user'] = user.username
             auth.login(request, user)
-            return HttpResponse("login success")
+            return redirect("/")
             # request.session['otp'] = otp
             # context = {'email': user.email, 'otp': otp}
             # mail(context)

@@ -1,7 +1,8 @@
 from django.shortcuts import render,HttpResponse,redirect
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User,auth
 from django.contrib import messages
-from home.models import Category,SubCategory
+from home.models import Category,SubCategory,Product
+
 
 def home(request):
     category = Category.objects.all()
